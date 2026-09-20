@@ -1,14 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Пошук зображень</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <main></main>
+    <header class="header">
+      <form class="search-form" id="search-form">
+        <input
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+
+    <main>
+      <section class="gallery-section">
+        <ul class="gallery"></ul>
+        <span class="loader is-hidden"></span>
+        <button type="button" class="load-more is-hidden">Load more</button>
+      </section>
+    </main>
 
     <script type="module" src="./main.js"></script>
   </body>
